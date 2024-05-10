@@ -7,11 +7,11 @@ Requirements :
 - 2. npm should be availbale
  
 Installation : 
-- 1. Clone the GitHub repository to your local machine : git clone https://github.com/deepakyadav0109/JWT-Authentication.git
+- 1. Clone the GitHub repository to your local machine : `git clone https://github.com/deepakyadav0109/JWT-Authentication.git`
 
-- 2. Navigate to the project directory : cd path/to/the/project/directory
-- 3. Run : "npm install" to install all the dependencies.
-- 4. Start thr server : node index.js or nodemon index.js. It will start the server at localhost:3000
+- 2. Navigate to the project directory : `cd path/to/the/project/directory`
+- 3. Run : `npm install` to install all the dependencies.
+- 4. Start thr server : `node index.js` or `nodemon index.js`. It will start the server at localhost:3000
  
 You can connect the application to the locally created database( MySQL or SQLite or PostgreSQL). But for testing middleware functions, route-handlers, or error handling logic, you may not necessarily need to connect to the database.
 
@@ -20,13 +20,14 @@ Making requests :
 You can test the application by making endpoint requests in two ways : 
 - 1. Using Postman
 - 2. Using command-lines
+
 I would suggest using Postman.
 
 Making requests through Postman.
 -
 1. Registration
    -
-   - Set up a POST request to `http://localhost:3000/api/auth/login`.
+   - Set up a POST request to `http://localhost:3000/api/auth/register`.
    - Set the request body to raw and select JSON in the dropdown menu. In the body, Write username and password in JSON format e.g.
    {
     "username": "Deepak",
