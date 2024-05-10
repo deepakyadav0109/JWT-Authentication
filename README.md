@@ -66,20 +66,30 @@ I have also provided comments at almost every step of the code so that you can u
 Here's an overview of the approach taken, challenges faced, and security measures implemented:
 
 Approach:
-
+-
 File Structure: The project was organized into different modules, including routes, controllers, middleware, and models, to maintain a clean and modular codebase.
-Authentication Endpoints: Separate routes were created for user registration and login, each handling their respective functionalities using bcrypt for password hashing and JWT for token generation.
-Protected Routes: Certain routes, such as the dashboard route, were protected using middleware that verifies the JWT token before allowing access.
-Token Blacklisting: An in-memory token blacklist was implemented to revoke tokens upon logout, enhancing security by preventing unauthorized access using revoked tokens.
-Challenges Faced:
 
+Authentication Endpoints: Separate routes were created for user registration and login, each handling their respective functionalities using bcrypt for password hashing and JWT for token generation.
+
+Protected Routes: Certain routes, such as the dashboard route, were protected using middleware that verifies the JWT token before allowing access.
+
+Token Blacklisting: An in-memory token blacklist was implemented to revoke tokens upon logout, enhancing security by preventing unauthorized access using revoked tokens.
+
+Challenges Faced:
+-
 Token Expiry Handling: Implementing logic to handle token expiration required careful consideration of token lifetimes and verification procedures to ensure timely expiration checks.
+
 Middleware Configuration: Configuring middleware to correctly handle token verification and blacklisting while maintaining modularity and scalability posed some challenges.
+
 Security Measures:
+-
 
 Password Hashing: User passwords were securely hashed using bcrypt before storing them in the database, preventing plaintext exposure in case of a data breach.
+
 JWT Implementation: JSON Web Tokens (JWTs) were used for authentication, providing a secure mechanism for transmitting user credentials and ensuring stateless authentication.
+
 Token Blacklisting: Implemented token blacklisting to invalidate tokens upon logout, mitigating the risk of unauthorized access using compromised tokens.
+
 Error Handling: Comprehensive error handling was implemented throughout the application to provide informative error messages without revealing sensitive information, thereby enhancing security.
 
 Thank You
